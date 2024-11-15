@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>My SAA Certification Journey.</title>
+		<meta name="description" content="This is a post on how I passed the SAA exam with very minimal cloud experience.">
+		<link rel="alternate" href="feed/feed.xml" type="application/atom+xml" title="Derek&#39;s Blog">
+		
+		<style>/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}
+/* This is an arbitrary CSS string added to the bundle */
+/* Defaults */
+:root {
+	--font-family: -apple-system, system-ui, sans-serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #C0C0C0;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-90);
+	--text-color-link: #082840;
+	--text-color-link-active: #5f2b48;
+	--text-color-link-visited: #17050F;
+
+	--syntax-tab-size: 2;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray-20: #e0e0e0;
+		--color-gray-50: #C0C0C0;
+		--color-gray-90: #dad8d8;
+
+		/* --text-color is assigned to --color-gray-_ above */
+		--text-color-link: #1493fb;
+		--text-color-link-active: #6969f7;
+		--text-color-link-visited: #a6a6f8;
+
+		--background-color: #15202b;
+	}
+}
+
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 40em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+main,
+footer {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+}
+header:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: .5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em .5em;
+	flex-wrap: wrap;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+	margin-right: 2em;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+	margin-right: 1em;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}</style>
+	</head>
+	<body>
+		<a href="#skip" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/eleventy-base-blog/" class="home-link">Derek&#39;s Blog</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item"><a href="/eleventy-base-blog/">Home</a></li>
+					<li class="nav-item"><a href="/eleventy-base-blog/blog/">Archive</a></li>
+					<li class="nav-item"><a href="/eleventy-base-blog/about/">About</a></li>
+					<li class="nav-item"><a href="/eleventy-base-blog/feed/feed.xml">Feed</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="skip">
+			<heading-anchors>
+				
+<h1 id="my-saa-certification-journey">My SAA Certification Journey.</h1>
+
+<ul class="post-metadata">
+	<li><time datetime="2024-11-15">15 November 2024</time></li>
+</ul>
+
+<p>In September of this year, I decided to tackle the <strong>AWS Certified Solutions Architect Associate (SAA)</strong> exam. Spoiler alert: I passed! 🎉 While studying, I often thought, _&quot;If I could start this process over, what would I do differently?&quot;. This post is my attempt to answer that question. I'll share how I studied, what worked, and what I'd change if I had a redo.</p>
+<h2 id="studying">Studying</h2>
+<p>My studying journey was a bit of a rollercoaster 🎢—some weeks I was highly motivated, while others I could barely bring myself to glance at my notes. Here's a rough breakdown of my timeline:</p>
+<ul>
+<li><strong>Weeks 1–4</strong>: Worked through Adrian Cantrill's SAA-C03 course.</li>
+<li><strong>Weeks 4–6</strong>: Reviewed notes and took random practice tests I found online.</li>
+<li><strong>Weeks 7–8</strong>: Dug into TutorialDojo practice tests and started using Anki.</li>
+<li><strong>End of Week 8</strong>: Passed the test! 🏆</li>
+</ul>
+<h3 id="course-review">Course Review</h3>
+<p>Adrian Cantrill’s course provided an excellent overview of AWS services and how they interact. However, I have a confession: I quit doing the demo lessons after about 25% of the course. The whole &quot;click-this-button-then-that-button&quot; routine didn’t feel like it was sticking. If the demos had been more self-guided, I think they might have reinforced the concepts better.</p>
+<p>I took detailed notes on all the services as I went through the course, which you can find <a href="https://github.com/derekjohnsonva/AWS-Certified-Solutions-Architext-Notes/tree/main">here</a>. To take these notes I use <a href="https://obsidian.md/">Obsidian</a>, which is one of my all time favorite apps. Honestly, my only issue with Obsidian is the people who evangelize it online. It isn't great at everything but it crushes taking notes for a class.</p>
+<h3 id="where-i-went-off-track">Where I Went Off Track</h3>
+<p>The time between finishing the Cantrill course and starting TutorialDojo practice tests was where I wasted the most time. This period was mostly me spinning my wheels trying to gather test-related info. I quickly realized I hadn’t retained as much as I’d hoped—especially around networking—and my recall was foggy at best.</p>
+<p>Thankfully, this detour led me to discover <a href="https://apps.ankiweb.net/">Anki</a>, the best flashcard system I’ve used. Like Obsidian, its fans hype it up a bit too much, but for this exam, it was a game-changer. AWS exams often test your ability to differentiate between services, and Anki helped me commit those details to memory.</p>
+<p>I started by downloading a <a href="https://ankiweb.net/shared/info/1917956996">shared deck</a> and worked through it. I also eventually caved and paid $10 for access to TutorialDojo practice tests—money well spent.</p>
+<h3 id="practice-makes-passing">Practice Makes... Passing</h3>
+<p>At first, I failed every practice test. 😭 Demoralizing? Absolutely. But by the sixth test, my scores had climbed into the 70s. The biggest factor in my improvement was reviewing missed questions and turning them into flashcards. Anki's <a href="https://docs.ankiweb.net/getting-started.html#key-concepts">guide on good flashcard design</a> helped me create cards that didn't suck.</p>
+<p>I learned that quickly scanning missed questions wasn’t enough; without flashcards, I’d miss the same questions again. Flashcards kept me honest. Reflecting on this, I wish I’d been this rigorous in college. I spent a lot of time <em>thinking</em> I knew things when, in reality, I was just good at peeking at the answer key.</p>
+<p>By the end of Week 8, after a week of daily practice tests and reviews, I scheduled my exam.</p>
+<hr>
+<h2 id="the-exam">The Exam</h2>
+<p>The exam itself went as well as I could have hoped. I scored 847/1000, which was higher than my practice test averages. 🎉</p>
+<h3 id="topics-i-thought-were-overrepresented">Topics I Thought Were Overrepresented</h3>
+<ul>
+<li>VPCs and how to connect them.</li>
+<li>RDS (especially Proxies).</li>
+<li>Load Balancers (ALB vs. NLB).</li>
+<li>Billing.</li>
+<li>Organizational Units.</li>
+<li>Web Application Firewalls.</li>
+</ul>
+<h3 id="topics-i-was-surprised-to-see-missing">Topics I Was Surprised to See Missing</h3>
+<ul>
+<li>CloudHSM.</li>
+<li>FSx.</li>
+<li>Machine Learning.</li>
+<li>SQS vs. SNS.</li>
+</ul>
+<hr>
+<h2 id="reflection">Reflection</h2>
+<p>Looking back, I realize I wasted a lot of time transcribing detailed notes on every service. While taking notes helped me stay engaged, <strong>TutorialDojo’s service summaries</strong> were far more comprehensive than mine. If I could do it again, I’d take brief notes and focus more on flashcards for reviewing service details.</p>
+<p>The notes I <em>did</em> find useful were those comparing related services, like...</p>
+<ul>
+<li>RDS vs. Aurora.</li>
+<li>SQS vs. SNS.</li>
+<li>VPC Peering vs. Transit Gateway.</li>
+<li>NACLs vs. Security Groups.</li>
+</ul>
+<p>Anything that helps build context for when to use different services is invaluable.</p>
+<p>I’m not sure if I’ll pursue more AWS certifications, but if I do, I feel confident I’ll study more efficiently next time. For now, I’m just happy I passed.</p>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p><em>Built with <a href="https://www.11ty.dev/">Eleventy v3.0.0</a></em></p>
+		</footer>
+
+		<!-- This page `/eleventy-base-blog/blog/SAACertificationJourney/` was built on 2024-11-15T20:30:26.064Z -->
+		<script type="module" src="/eleventy-base-blog/dist/rJ3_G-2ArF.js"></script>
+	</body>
+</html>

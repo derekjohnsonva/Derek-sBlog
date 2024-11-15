@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="pretty-atom-feed.xsl" type="text/xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>Blog Title</title>
+  <subtitle>This is a longer description about your blog.</subtitle>
+  <link href="https://example.com/eleventy-base-blog/feed/feed.xml" rel="self" />
+  <link href="https://example.com/eleventy-base-blog/" />
+  <updated>2024-11-15T00:00:00Z</updated>
+  <id>https://example.com/eleventy-base-blog/</id>
+  <author>
+    <name>Your Name</name>
+  </author>
+  <entry>
+    <title>My SAA Certification Journey.</title>
+    <link href="https://example.com/eleventy-base-blog/blog/SAACertificationJourney/" />
+    <updated>2024-11-15T00:00:00Z</updated>
+    <id>https://example.com/eleventy-base-blog/blog/SAACertificationJourney/</id>
+    <content type="html">&lt;p&gt;In September of this year, I decided to tackle the &lt;strong&gt;AWS Certified Solutions Architect Associate (SAA)&lt;/strong&gt; exam. Spoiler alert: I passed! 🎉 While studying, I often thought, _&amp;quot;If I could start this process over, what would I do differently?&amp;quot;. This post is my attempt to answer that question. I&#39;ll share how I studied, what worked, and what I&#39;d change if I had a redo.&lt;/p&gt;
+&lt;h2 id=&quot;studying&quot;&gt;Studying&lt;/h2&gt;
+&lt;p&gt;My studying journey was a bit of a rollercoaster 🎢—some weeks I was highly motivated, while others I could barely bring myself to glance at my notes. Here&#39;s a rough breakdown of my timeline:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Weeks 1–4&lt;/strong&gt;: Worked through Adrian Cantrill&#39;s SAA-C03 course.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Weeks 4–6&lt;/strong&gt;: Reviewed notes and took random practice tests I found online.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Weeks 7–8&lt;/strong&gt;: Dug into TutorialDojo practice tests and started using Anki.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;End of Week 8&lt;/strong&gt;: Passed the test! 🏆&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;course-review&quot;&gt;Course Review&lt;/h3&gt;
+&lt;p&gt;Adrian Cantrill’s course provided an excellent overview of AWS services and how they interact. However, I have a confession: I quit doing the demo lessons after about 25% of the course. The whole &amp;quot;click-this-button-then-that-button&amp;quot; routine didn’t feel like it was sticking. If the demos had been more self-guided, I think they might have reinforced the concepts better.&lt;/p&gt;
+&lt;p&gt;I took detailed notes on all the services as I went through the course, which you can find &lt;a href=&quot;https://github.com/derekjohnsonva/AWS-Certified-Solutions-Architext-Notes/tree/main&quot;&gt;here&lt;/a&gt;. To take these notes I use &lt;a href=&quot;https://obsidian.md/&quot;&gt;Obsidian&lt;/a&gt;, which is one of my all time favorite apps. Honestly, my only issue with Obsidian is the people who evangelize it online. It isn&#39;t great at everything but it crushes taking notes for a class.&lt;/p&gt;
+&lt;h3 id=&quot;where-i-went-off-track&quot;&gt;Where I Went Off Track&lt;/h3&gt;
+&lt;p&gt;The time between finishing the Cantrill course and starting TutorialDojo practice tests was where I wasted the most time. This period was mostly me spinning my wheels trying to gather test-related info. I quickly realized I hadn’t retained as much as I’d hoped—especially around networking—and my recall was foggy at best.&lt;/p&gt;
+&lt;p&gt;Thankfully, this detour led me to discover &lt;a href=&quot;https://apps.ankiweb.net/&quot;&gt;Anki&lt;/a&gt;, the best flashcard system I’ve used. Like Obsidian, its fans hype it up a bit too much, but for this exam, it was a game-changer. AWS exams often test your ability to differentiate between services, and Anki helped me commit those details to memory.&lt;/p&gt;
+&lt;p&gt;I started by downloading a &lt;a href=&quot;https://ankiweb.net/shared/info/1917956996&quot;&gt;shared deck&lt;/a&gt; and worked through it. I also eventually caved and paid $10 for access to TutorialDojo practice tests—money well spent.&lt;/p&gt;
+&lt;h3 id=&quot;practice-makes-passing&quot;&gt;Practice Makes... Passing&lt;/h3&gt;
+&lt;p&gt;At first, I failed every practice test. 😭 Demoralizing? Absolutely. But by the sixth test, my scores had climbed into the 70s. The biggest factor in my improvement was reviewing missed questions and turning them into flashcards. Anki&#39;s &lt;a href=&quot;https://docs.ankiweb.net/getting-started.html#key-concepts&quot;&gt;guide on good flashcard design&lt;/a&gt; helped me create cards that didn&#39;t suck.&lt;/p&gt;
+&lt;p&gt;I learned that quickly scanning missed questions wasn’t enough; without flashcards, I’d miss the same questions again. Flashcards kept me honest. Reflecting on this, I wish I’d been this rigorous in college. I spent a lot of time &lt;em&gt;thinking&lt;/em&gt; I knew things when, in reality, I was just good at peeking at the answer key.&lt;/p&gt;
+&lt;p&gt;By the end of Week 8, after a week of daily practice tests and reviews, I scheduled my exam.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;the-exam&quot;&gt;The Exam&lt;/h2&gt;
+&lt;p&gt;The exam itself went as well as I could have hoped. I scored 847/1000, which was higher than my practice test averages. 🎉&lt;/p&gt;
+&lt;h3 id=&quot;topics-i-thought-were-overrepresented&quot;&gt;Topics I Thought Were Overrepresented&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;VPCs and how to connect them.&lt;/li&gt;
+&lt;li&gt;RDS (especially Proxies).&lt;/li&gt;
+&lt;li&gt;Load Balancers (ALB vs. NLB).&lt;/li&gt;
+&lt;li&gt;Billing.&lt;/li&gt;
+&lt;li&gt;Organizational Units.&lt;/li&gt;
+&lt;li&gt;Web Application Firewalls.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;topics-i-was-surprised-to-see-missing&quot;&gt;Topics I Was Surprised to See Missing&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;CloudHSM.&lt;/li&gt;
+&lt;li&gt;FSx.&lt;/li&gt;
+&lt;li&gt;Machine Learning.&lt;/li&gt;
+&lt;li&gt;SQS vs. SNS.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;reflection&quot;&gt;Reflection&lt;/h2&gt;
+&lt;p&gt;Looking back, I realize I wasted a lot of time transcribing detailed notes on every service. While taking notes helped me stay engaged, &lt;strong&gt;TutorialDojo’s service summaries&lt;/strong&gt; were far more comprehensive than mine. If I could do it again, I’d take brief notes and focus more on flashcards for reviewing service details.&lt;/p&gt;
+&lt;p&gt;The notes I &lt;em&gt;did&lt;/em&gt; find useful were those comparing related services, like...&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;RDS vs. Aurora.&lt;/li&gt;
+&lt;li&gt;SQS vs. SNS.&lt;/li&gt;
+&lt;li&gt;VPC Peering vs. Transit Gateway.&lt;/li&gt;
+&lt;li&gt;NACLs vs. Security Groups.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Anything that helps build context for when to use different services is invaluable.&lt;/p&gt;
+&lt;p&gt;I’m not sure if I’ll pursue more AWS certifications, but if I do, I feel confident I’ll study more efficiently next time. For now, I’m just happy I passed.&lt;/p&gt;
+</content>
+  </entry>
+</feed>
