@@ -2,32 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 	
 	<url>
-		<loc>/eleventy-base-blog/blog/SAACertificationJourney/</loc>
+		<loc>/Derek-sBlog/blog/SAACertificationJourney/</loc>
 		<lastmod>2024-11-15</lastmod>
 	</url>
 	
 	<url>
-		<loc>/eleventy-base-blog/about/</loc>
+		<loc>/Derek-sBlog/about/</loc>
 		<lastmod>2024-11-15</lastmod>
 	</url>
 	
 	<url>
-		<loc>/eleventy-base-blog/blog/</loc>
+		<loc>/Derek-sBlog/blog/</loc>
 		<lastmod>2024-11-15</lastmod>
 	</url>
 	
 	<url>
-		<loc>/eleventy-base-blog/</loc>
+		<loc>/Derek-sBlog/</loc>
 		<lastmod>2024-11-15</lastmod>
 	</url>
 	
 	<url>
-		<loc>/eleventy-base-blog/tags/</loc>
+		<loc>/Derek-sBlog/tags/</loc>
 		<lastmod>2024-11-15</lastmod>
 	</url>
 	
 	<url>
-		<loc>/eleventy-base-blog/feed/feed.xml</loc>
+		<loc>/Derek-sBlog/feed/feed.xml</loc>
 		<lastmod>2024-11-15</lastmod>
 	</url>
 </urlset>
