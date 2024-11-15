@@ -3,18 +3,18 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <title>Blog Title</title>
   <subtitle>This is a longer description about your blog.</subtitle>
-  <link href="https://example.com/eleventy-base-blog/feed/feed.xml" rel="self" />
-  <link href="https://example.com/eleventy-base-blog/" />
+  <link href="https://example.com/Derek-sBlog/feed/feed.xml" rel="self" />
+  <link href="https://example.com/Derek-sBlog/" />
   <updated>2024-11-15T00:00:00Z</updated>
-  <id>https://example.com/eleventy-base-blog/</id>
+  <id>https://example.com/Derek-sBlog/</id>
   <author>
     <name>Your Name</name>
   </author>
   <entry>
     <title>My SAA Certification Journey.</title>
-    <link href="https://example.com/eleventy-base-blog/blog/SAACertificationJourney/" />
+    <link href="https://example.com/Derek-sBlog/blog/SAACertificationJourney/" />
     <updated>2024-11-15T00:00:00Z</updated>
-    <id>https://example.com/eleventy-base-blog/blog/SAACertificationJourney/</id>
+    <id>https://example.com/Derek-sBlog/blog/SAACertificationJourney/</id>
     <content type="html">&lt;p&gt;In September of this year, I decided to tackle the &lt;strong&gt;AWS Certified Solutions Architect Associate (SAA)&lt;/strong&gt; exam. Spoiler alert: I passed! 🎉 While studying, I often thought, _&amp;quot;If I could start this process over, what would I do differently?&amp;quot;. This post is my attempt to answer that question. I&#39;ll share how I studied, what worked, and what I&#39;d change if I had a redo.&lt;/p&gt;
 &lt;h2 id=&quot;studying&quot;&gt;Studying&lt;/h2&gt;
 &lt;p&gt;My studying journey was a bit of a rollercoaster 🎢—some weeks I was highly motivated, while others I could barely bring myself to glance at my notes. Here&#39;s a rough breakdown of my timeline:&lt;/p&gt;
